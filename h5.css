@@ -1,0 +1,242 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    overflow: hidden;
+    position: relative;
+}
+.touch{
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    z-index: 200;
+}
+.touch1{
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    z-index: 200;
+    width: 70px;
+    height: 100px;
+    background: url("img/effect/phone_touch.png") no-repeat center center;
+    -webkit-animation-name: scaleDiv;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-direction: alternate;
+}
+
+@keyframes scaleDiv
+{
+    0% {
+        -webkit-transform:scale(1);
+    }
+    25% {
+        -webkit-transform:scale(1.1);
+    }
+    50% {
+        -webkit-transform:scale(1);
+    }
+    75% {
+        -webkit-transform:scale(1.1);
+    }
+    100% {
+        -webkit-transform:scale(1);
+    }
+}
+
+@-webkit-keyframes scaleDiv /* Safari and Chrome */
+{
+    0% {
+        -webkit-transform:scale(1);
+    }
+    25% {
+        -webkit-transform:scale(1.1);
+    }
+    50% {
+        -webkit-transform:scale(1);
+    }
+    75% {
+        -webkit-transform:scale(1.1);
+    }
+    100% {
+        -webkit-transform:scale(1);
+    }
+}
+
+
+
+
+
+.bg-img{
+    position: absolute;
+}
+.over-img{
+    position: absolute;
+}
+.video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+}
+.none{
+    display: none;
+}
+#canvas{
+    position: absolute;
+    top: 0;
+}
+.quence{
+    position: absolute;
+    top: 0;
+    z-index: 300;
+}
+#Rotation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url(img/canves_bg/popup_bgback.jpg) no-repeat center center;
+    background-color: #272727;
+    transform-style: preserve-3d;
+    z-index: 999;
+    transform: translateZ(666px);
+    background-size: 100% auto;
+}
+#rBack {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+/*    background: url(img/canves_bg/hint.png) no-repeat center center;*/
+    /*transform-style: preserve-3d;*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+@media all and (orientation: landscape) {
+    #Rotation {
+        display: none;
+    }
+}
+@media all and (orientation: portrait) {
+    #Rotation {
+        display: block;
+    }
+}
+
+
+.loadimg {
+    position: absolute;
+    z-index: 500 ;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.loadimg img.bg {
+    width: 100%;
+    height: 100%;
+}
+.loadimg .text {
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    width: 20%;
+    left: 40%;
+}
+.loadimg .loadin {
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.loadimg .icon{
+    position: absolute;
+    z-index: 10;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%);
+    animation:myfirst 2s infinite;
+    -webkit-animation:myfirst 2s infinite; /* Safari and Chrome */
+    display: none;
+}
+
+@keyframes myfirst
+{
+    0%   {top:50%;}
+    25%  {top:51%;}
+    50%  {top:52%;}
+    75%  {top:51%;}
+    100% {top:50%;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%   {top:50%;}
+    25%  {top:51%;}
+    50%  {top:52%;}
+    75%  {top:51%;}
+    100% {top:50%;}
+}
+
+
+.loadimg .totalload {
+    position: absolute;
+    z-index: 10;
+    top: 55%;
+    width: 20%;
+    height: 1%;
+    left: 40%;
+    border-radius: 2px;
+    background-color: #bfbfbf;
+}
+.loadimg .totalload .loading {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    border-radius: 2px;
+    background-color: #333;
+}
+#butterfly {
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    height: 13%;
+}
+#butt {
+    transform: rotate3d(1, 1, 1, 0deg);
+    height: 100%;
+}
+
+.play_video{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    display: none;
+    text-align: center;
+    z-index: 100;
+}
+
+.control{
+    z-index: 100;
+    position: absolute;
+    background: url('music/open.png') no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    right: 20px;
+    top: 10px;
+}
+
+

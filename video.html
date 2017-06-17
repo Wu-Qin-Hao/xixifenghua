@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+<!--<div style="position: absolute">
+    <img src="img/canves_bg/popup_bg.jpg">
+</div>-->
+<video id="video" autoplay="autoplay" preload="auto">
+    <source src="music/videoplayback.mp4" type="video/mp4">
+    您的浏览器不支持Video标签。
+</video>
+<script src="lib/jquery-3.1.0.min.js"></script>
+<script>
+    $("#video").attr('style','width:'+innerWidth+'px;height:'+innerHeight+'px');
+</script>
+</body>
+</html>
